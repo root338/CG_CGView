@@ -31,7 +31,7 @@
     // Drawing code
     
     //当线宽为奇数时偏移绘制坐标
-    CGFloat pixelAdjustOffset;
+    CGFloat pixelAdjustOffset = 0.0;
     if ((int)(self.lineWidth * [UIScreen mainScreen].scale) % 2 != 0) {
         pixelAdjustOffset = SINGLE_LINE_ADJUST_OFFSET;
     }
