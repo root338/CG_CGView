@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_OPTIONS(NSInteger, LineBoxType) {
+    
+    LineBoxTypeTop      = 1 << 0,
+    LineBoxTypeLeft     = 1 << 1,
+    LineBoxTypeBottom   = 1 << 2,
+    LineBoxTypeRight    = 1 << 3,
+    LineBoxTypeAll      = LineBoxTypeTop | LineBoxTypeLeft | LineBoxTypeBottom | LineBoxTypeRight,
+};
+
 /**
  *  线框视图
  */
@@ -16,7 +25,7 @@
 /**
  *  线框需要设置的周边
  */
-@property (assign, nonatomic) UIRectCorner rectCorner;
+@property (assign, nonatomic) LineBoxType rectCorner;
 
 /**
  *  圆角
